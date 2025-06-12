@@ -1,0 +1,39 @@
+{
+    "name": "My OPC-UA device type",
+    "enabled": true,
+    "referencedServerId": "1319",
+    "referencedServerName": "OPC UA Simulation Server",
+    "referencedRootNodeId": "ns=3;s=85/0:Simulation",
+    "mappings": [
+        {
+            "browsePath": [
+                "3:Sinusoid"
+            ],
+            "name": "Sinusoid",
+            "measurementCreation": {
+                "unit": "T",
+                "type": "MyMeasurementType",
+                "fragmentName": "MyMeasurement",
+                "series": "MySeries1"
+            }
+        },
+        {
+            "browsePath": [
+                "3:Triangle"
+            ],
+            "name": "Triangle",
+            "measurementCreation": {
+                "unit": "T",
+                "type": "MyMeasurementType",
+                "fragmentName": "MyMeasurement",
+                "series": "MySeries2"
+            }
+        }
+    ],
+    "subscriptionType": {
+        "type": "Subscription",
+        "subscriptionParameters": {
+            "samplingRate": 5000
+        }
+   }
+}
